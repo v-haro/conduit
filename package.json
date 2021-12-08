@@ -1,0 +1,44 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "automation maded in cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "open": "cypress open",
+    "testConduit": "npm run test --headed  --spec \"cypress\\integration\\WorkTest\\TestConduit.js\"",
+   
+
+    
+    "quotationVidaInversion": "npm run test -- --browser chrome --headless --spec \"cypress\\integration\\Cucumber\\makePolice_vidainversion.feature\"",
+    "testDashboardHeadless": "npm run test -- --record --key --browser chrome --headless"
+    
+  },
+  "author": "vharo",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.1.0",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSufix": ".cucumber"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://victor.haro@gitlab.com/victor.haro/acselecypressautomation.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/victor.haro/acselecypressautomation/issues"
+  },
+  "homepage": "https://gitlab.com/victor.haro/acselecypressautomation#readme",
+  "dependencies": {
+    "har-validator": "^5.1.5"
+  }
+}

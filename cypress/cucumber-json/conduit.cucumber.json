@@ -1,0 +1,44 @@
+[
+  {
+    "description": "    Making register and setting scenarios for website demo.realworld.io/#/",
+    "keyword": "Feature",
+    "name": "Test of Conduit Web",
+    "line": 1,
+    "id": "test-of-conduit-web",
+    "tags": [],
+    "uri": "conduit.feature",
+    "elements": [
+      {
+        "id": "test-of-conduit-web;scenario-for-register-and-setting-scenarios",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Scenario for register and setting scenarios",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user need an email to register, go to getnada.com to create a temporal email \"https://getnada.com/\"",
+            "result": {
+              "status": "passed",
+              "duration": 3426000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "We get email created \"https://demo.realworld.io/#/\"",
+            "result": {
+              "status": "failed",
+              "duration": 58000000,
+              "error_message": "CypressError: `cy.visit()` failed because you are attempting to visit a URL that is of a different origin.\n\nThe new URL is considered a different origin because the following parts of the URL are different:\n\n  > superdomain\n\nYou may only `cy.visit()` same-origin URLs within a single test.\n\nThe previous URL you visited was:\n\n  > 'https://getnada.com'\n\nYou're attempting to visit this URL:\n\n  > 'https://demo.realworld.io'\n\nYou may need to restructure some of your test code to avoid this problem.\n    at cannotVisitDifferentOrigin (https://getnada.com/__cypress/runner/cypress_runner.js:157176:72)\n    at go (https://getnada.com/__cypress/runner/cypress_runner.js:157985:18)\n    at visit (https://getnada.com/__cypress/runner/cypress_runner.js:158173:16)\n    at Context.visit (https://getnada.com/__cypress/runner/cypress_runner.js:158176:14)\nFrom Your Spec Code:\n    at Context.eval (https://getnada.com/__cypress/tests?p=cypress\\integration\\Cucumber\\conduit.feature:51:8)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
